@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class BuscaElementosPorCssSelector {
 		
 	WebDriver driver;
-	private static final String ROOT = "http://localhost:8080/curso-selenium/";
+	private static final String ROOT = "http://localhost:8080/exemplos-selenium/";
 	
 	@Before
 	public void setUp(){

@@ -38,7 +38,6 @@
 <body>
 	<h1>PAGINA COMPLEXA</h1>
 
-	<h5>Exercício</h5>
 	<div class="divpai border">
 		Div Pai
 		<div class="divfilho border">
