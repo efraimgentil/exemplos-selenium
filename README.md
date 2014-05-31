@@ -23,7 +23,7 @@ public static void main(String[] args) {
 }
 ```
 
-Em um metodo de teste:
+Em um metodo de teste (jUnit ou TestNG:
 ```java
 @Test
 public void abrirFirefox(){
