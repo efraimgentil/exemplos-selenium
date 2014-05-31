@@ -16,7 +16,9 @@ public class AbrindoBrowser {
 	
 	@Test
 	public void abrirFirefox(){
-		driver.get("http://www.google.com.br");
+		WebDriver driver = new FirefoxDriver();
+		
+		driver.get("https://github.com/efraimgentil/exemplos-selenium/");
 	}
 	
 }
