@@ -7,7 +7,7 @@ Projeto contendo exemplos de uso do framework selenium para automatização de t
 Em um projeto java com maven no gerencimaneto de dependencias adicione a seguinte dependencia.
 ```xml
 <dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
+  	<groupId>org.seleniumhq.selenium</groupId>
 	<artifactId>selenium-java</artifactId>
 	<version>2.42.1</version>
 </dependency>  
