@@ -18,6 +18,7 @@ public class CadastroDeUsuarioAcceptance {
 	@Before
 	public void setUp() {
 		driver = new FirefoxDriver();
+		driver.get(PAGINA_CADASTRO_USUARIO);
 	}
 
 	@After
@@ -27,7 +28,6 @@ public class CadastroDeUsuarioAcceptance {
 
 	@Test
 	public void deveCadastrarUmNovoUsuarioComSucesso() {
-		driver.get(PAGINA_CADASTRO_USUARIO);
 
 		WebElement nomeUsuario = driver.findElement(By.id("nomeUsuario"));
 		WebElement login = driver.findElement(By.id("login"));
@@ -47,8 +47,6 @@ public class CadastroDeUsuarioAcceptance {
 	
 	@Test
 	public void deveValidarCamposEMostrarMensagensDeErrorAoFalhar(){
-		driver.get(PAGINA_CADASTRO_USUARIO);
-		
 		driver.findElement( By.id("submit") ).click();
 		
 		WebElement message = driver.findElement(By.id("message"));
@@ -68,8 +66,6 @@ public class CadastroDeUsuarioAcceptance {
 	
 	@Test
 	public void deveValidarSenhaComMenosDe6Caracteres(){
-		driver.get(PAGINA_CADASTRO_USUARIO);
-		
 		WebElement senha = driver.findElement(By.id("senha"));
 		senha.sendKeys("senha");
 		driver.findElement( By.id("submit") ).click();

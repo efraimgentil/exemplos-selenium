@@ -20,6 +20,7 @@ public class LoginAssincronoAcceptance {
 	@Before
 	public void setUp(){
 		driver = new FirefoxDriver();
+		driver.get(PAGINA_LOGIN);
 	}
 	
 	@After
@@ -29,8 +30,6 @@ public class LoginAssincronoAcceptance {
 	
 	@Test
 	public void deveLogarComSucessoEMostrarMensagemDeSucesso(){
-		driver.get(PAGINA_LOGIN);
-		
 		WebElement email = driver.findElement(By.id("email") );
 		WebElement senha = driver.findElement(By.id("senha") );
 		
@@ -47,8 +46,6 @@ public class LoginAssincronoAcceptance {
 	
 	@Test
 	public void deveFalharAoTentarLogarEMostrarMensagemDeErro(){
-		driver.get(PAGINA_LOGIN);
-
 		driver.findElement(By.id("submit")).click();
 		WebDriverWait wait = new WebDriverWait(driver, 10 );
 		WebElement mensagemSucesso = wait.until( ExpectedConditions.presenceOfElementLocated( By.id("falha")));
