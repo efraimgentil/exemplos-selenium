@@ -13,6 +13,7 @@ import static org.junit.Assert.*;
 public class CadastroDeUsuarioAcceptance {
 
 	WebDriver driver;
+	final String PAGINA_CADASTRO_USUARIO = "http://localhost:8080/exemplos-selenium/cadastro-usuario";
 
 	@Before
 	public void setUp() {
@@ -26,7 +27,7 @@ public class CadastroDeUsuarioAcceptance {
 
 	@Test
 	public void deveCadastrarUmNovoUsuarioComSucesso() {
-		driver.get("http://localhost:8080/exemplos-selenium/cadastro-usuario");
+		driver.get(PAGINA_CADASTRO_USUARIO);
 
 		WebElement nomeUsuario = driver.findElement(By.id("nomeUsuario"));
 		WebElement login = driver.findElement(By.id("login"));
@@ -46,7 +47,7 @@ public class CadastroDeUsuarioAcceptance {
 	
 	@Test
 	public void deveValidarCamposEMostrarMensagensDeErrorAoFalhar(){
-		driver.get("http://localhost:8080/exemplos-selenium/cadastro-usuario");
+		driver.get(PAGINA_CADASTRO_USUARIO);
 		
 		driver.findElement( By.id("submit") ).click();
 		
@@ -67,7 +68,7 @@ public class CadastroDeUsuarioAcceptance {
 	
 	@Test
 	public void deveValidarSenhaComMenosDe6Caracteres(){
-		driver.get("http://localhost:8080/exemplos-selenium/cadastro-usuario");
+		driver.get(PAGINA_CADASTRO_USUARIO);
 		
 		WebElement senha = driver.findElement(By.id("senha"));
 		senha.sendKeys("senha");

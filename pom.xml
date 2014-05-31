@@ -5,7 +5,7 @@
 	<groupId>br.com.efraimgentil</groupId>
 	<artifactId>exemplos-selenium</artifactId>
 	<version>1.0</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>curso-selenium</name>
 	<url>http://maven.apache.org</url>
@@ -15,31 +15,32 @@
 	</properties>
 
 	<dependencies>
-	   <dependency>
-		    <groupId>javax.servlet</groupId>
-		    <artifactId>javax.servlet-api</artifactId>
-		    <version>3.0.1</version>
-		</dependency>
-		
 		<dependency>
-		    <groupId>javax.servlet</groupId>
-		    <artifactId>jstl</artifactId>
-		    <version>1.2</version>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
 		</dependency>
-	
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
-	        <groupId>org.seleniumhq.selenium</groupId>
-	        <artifactId>selenium-java</artifactId>
-	        <version>2.42.1</version>
-	        <scope>test</scope>
-	    </dependency>  
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.42.1</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 
@@ -54,12 +55,12 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.4</version>
-            </plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+			</plugin>
 		</plugins>
 	</build>
 </project>
