@@ -16,19 +16,19 @@ Com a dependencia devidamente configurada você já pode utilizar o selenium em 
 
 Em um metodo main:
 ```java
-  public static void main(String[] args) {
-		WebDriver driver = new FirefoxDriver();
+public static void main(String[] args) {
+	WebDriver driver = new FirefoxDriver();
 		
-		driver.get("https://github.com/efraimgentil/exemplos-selenium/");
-	}
+	driver.get("https://github.com/efraimgentil/exemplos-selenium/");
+}
 ```
 
 Em um metodo de teste:
 ```java
 @Test
-	public void abrirFirefox(){
-		WebDriver driver = new FirefoxDriver();
+public void abrirFirefox(){
+	WebDriver driver = new FirefoxDriver();
 		
-		driver.get("https://github.com/efraimgentil/exemplos-selenium/");
-	}
+	driver.get("https://github.com/efraimgentil/exemplos-selenium/");
+}
 ```
