@@ -17,23 +17,16 @@ public class ComGoogleChrome {
 	
 	@Before
 	public void setUp(){
-		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		capabilities.setJavascriptEnabled(true);
-//		capabilities.setCapability("chrome.binary", " ");
-		
 		System.setProperty("webdriver.chrome.driver", "/home/efraim/Downloads/chromedriver");
-		
-		driver = new ChromeDriver(capabilities);
+		driver = new ChromeDriver();
 	}
 	
 	@Test
-	public void d (){
+	public void deveAbrirChromeEProcurarPorEfraimGentilNoGoogle (){
 		driver.get("http://www.google.com.br");
-		
 		WebElement busca = driver.findElement( By.id("gbqfq") );
 		busca.sendKeys("Efraim Gentil");
 		busca.sendKeys( Keys.RETURN );
-		
 	}
 	
 }
