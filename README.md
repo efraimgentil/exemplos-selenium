@@ -41,7 +41,7 @@ Para rodar os testes usando o navegador chrome basta apontar para o chromedriver
 
 ```java
 @Test
-public void d (){
+public void rodandoTesteComChrome(){
 	System.setProperty("webdriver.chrome.driver", "/home/efraim/Downloads/chromedriver");
 	WebDriver driver = new ChromeDriver();
 	driver.get("http://www.google.com.br");
